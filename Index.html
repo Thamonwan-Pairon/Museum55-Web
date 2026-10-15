@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRURU MUSEUM - New Knowledge. New Storytelling. Built for Everyday Living.</title>
+  
+  <!-- Meta Information -->
+  <meta name="description" content="GRURU MUSEUM: พิพิธภัณฑ์ความรู้ดิจิทัลสไตล์ Modern Art ผสม Sci-Fi ที่เปลี่ยนภูมิปัญญาจากอดีตให้กลายเป็นกราฟความรู้และบทเรียนที่ใช้ได้จริงในชีวิตประจำวัน">
+  <meta name="keywords" content="GRURU MUSEUM, Knowledge Graph, Data Booming, Future Archaeology, Digital Museum Thailand">
+  <meta name="author" content="GRURU MUSEUM Team">
+
+  <!-- Google Fonts: Chakra Petch, IBM Plex Sans Thai, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets (Supporting both stye.css and style.css) -->
+  <link rel="stylesheet" href="stye.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Specimen Grid (Pattern #1: 48px Specimen Grid) -->
+  <div class="specimen-grid-ambient" aria-hidden="true"></div>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- HUD Ambient Coordinates -->
+  <div class="hud-coord hud-coord-tl">+ A1 // LAT 13.7563° N</div>
+  <div class="hud-coord hud-coord-tr">SEC-04 // LON 100.5018° E +</div>
+  <div class="hud-coord hud-coord-bl">+ ARCHAEOLOGY_LAB_REV: 2.4.0</div>
+  <div class="hud-coord hud-coord-br">SYSTEM: ONLINE (WCAG_AA) +</div>
+
+  <!-- =========================================================================
+       TOP GLOBAL HUD NAVBAR
+       ========================================================================= -->
+  <header class="top-hud">
+    <div class="top-hud-inner">
+      <a href="#hero" class="brand-wrapper" title="GRURU MUSEUM Home">
+        <div class="brand-logo-frame">
+          <img src="gruru_thai_tech_logo.jpg" alt="GRURU Logo">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">
+            GRURU MUSEUM
+            <span class="specimen-label" style="font-size: 10px; padding: 1px 6px;">LAB-01</span>
+          </span>
+          <span class="brand-sub">FUTURE ARCHAEOLOGY PLATFORM</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hall-exhibitions" class="nav-link">HALL 01 // EXHIBITIONS</a></li>
+          <li><a href="#hall-graph" class="nav-link">HALL 02 // DATA BOOMING</a></li>
+          <li><a href="#hall-lab" class="nav-link">HALL 03 // EVERYDAY LAB</a></li>
+          <li><a href="#hall-about" class="nav-link">HALL 04 // ABOUT</a></li>
+        </ul>
+      </nav>
+
+      <!-- HUD Action Controls -->
+      <div class="hud-actions">
+        <!-- Presentation Pitch Deck Link -->
+        <a href="Index_presentation_backup.html" class="btn-deck" title="เปิดโหมดสไลด์นำเสนอผู้บริหาร (Minister of Digital Presentation)">
+          <span>🏛️</span>
+          <span>โหมดนำเสนอ MDES</span>
+        </a>
+
+        <!-- Sound Toggle -->
+        <button id="soundToggleBtn" class="hud-btn-icon" title="เปิด/ปิดเสียงเอฟเฟกต์สังเคราะห์" aria-label="Toggle Sound">
+          🔊
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="hud-btn-icon" title="สลับโหมดห้องแล็บ (มืด) / โหมดเอกสารหอจดหมายเหตุ (สว่าง)" aria-label="Toggle Theme">
+          ☀️
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: FUTURE ARCHAEOLOGY
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="specimen-label">
+              <span class="dot"></span>
+              <span>SPECIMEN ID: GRM-2026-CORE-001</span>
+            </span>
+            <span class="category-pill pill-tech">FUTURE ARCHAEOLOGY LAB</span>
+          </div>
+
+          <h1 class="hero-headline">
+            อดีตคือข้อมูล <br>
+            <span class="gradient-text-timewarp">อนาคตคือเรื่องเล่า</span>
+          </h1>
+
+          <p class="hero-description">
+            พิพิธภัณฑ์ความรู้ดิจิทัลสไตล์ Modern Art ผสมผสาน Sci-Fi ที่ปลุกภูมิปัญญาจากอดีตให้กลับมามีชีวิต 
+            ถอดรหัสเป็นโครงข่ายความรู้ที่สำรวจได้ด้วยตนเอง และแปลงเป็นบทเรียนที่นำไปใช้ได้จริงในชีวิตประจำวัน
+          </p>
+
+          <div class="hero-btn-group">
+            <a href="#hall-exhibitions" class="btn-primary">
+              <span>เริ่มขุดค้นความรู้</span>
+              <span>⚡</span>
+            </a>
+            <a href="#hall-graph" class="btn-secondary">
+              <span>ทดลอง DATA BOOMING</span>
+              <span>💥</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-num">12,480+</span>
+              <span class="stat-label">โหนดความรู้ที่ถอดรหัส</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" style="color: var(--gr-cyan);">100%</span>
+              <span class="stat-label">หลักฐานตรวจสอบได้</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" style="color: var(--gr-ember);">3 SEC</span>
+              <span class="stat-label">เข้าใจด้วย Data Booming</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" style="color: var(--cat-bio);">WCAG AA</span>
+              <span class="stat-label">มาตรฐานเข้าถึงสากล</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-frame cut-corner">
+            <img src="ChatGPT Image Oct 8, 2026, 09_53_37 PM-5.png" alt="Future Archaeology Laboratory Showcase">
+          </div>
+          <div class="hero-floating-card">
+            <div class="title">🏛️ ARCHIVE SPECIMEN REPOSITORY</div>
+            <div class="desc">
+              ผสานความนิ่งเรียบแบบแกลเลอรี Modern Art เข้ากับความล้ำสมัยของห้องแล็บวิทยาศาสตร์ยุคอวกาศ
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HALL 01: DIGITAL EXHIBITIONS
+       ========================================================================= -->
+  <section class="section-block" id="hall-exhibitions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-row">
+          <span class="section-tag">HALL 01 // EXHIBITIONS</span>
+          <span class="specimen-label">VISUAL STORYTELLING</span>
+        </div>
+        <h2 class="section-title">นิทรรศการความรู้ดิจิทัลที่ดูจบใน 3-5 นาที</h2>
+        <p class="section-subtitle">
+          สำรวจชุดนิทรรศการคัดสรรจากประวัติศาสตร์ วิทยาศาสตร์ และภูมิปัญญาไทย 
+          ทุกเรื่องราวมีหลักฐานอ้างอิง 100% และสรุปเป็น Everyday Takeaway สำหรับชีวิตวันนี้
+        </p>
+      </div>
+
+      <!-- Filter and Live Search Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด (ALL)</button>
+          <button class="filter-btn" data-filter="sci">🔬 วิทยาศาสตร์ (SCI)</button>
+          <button class="filter-btn" data-filter="tech">💻 เทคโนโลยี (TECH)</button>
+          <button class="filter-btn" data-filter="hist">📜 ประวัติศาสตร์ (HIST)</button>
+          <button class="filter-btn" data-filter="cult">🌿 วัฒนธรรม (CULT)</button>
+          <button class="filter-btn" data-filter="bio">🌱 ธรรมชาติ (BIO)</button>
+        </div>
+
+        <div class="search-box">
+          <span style="font-size: 14px;">🔍</span>
+          <input type="text" id="searchExhibitions" placeholder="ค้นหาตามชื่อ, รหัส, บทเรียน..." aria-label="Search Exhibitions">
+        </div>
+      </div>
+
+      <!-- Dynamic Exhibitions Grid (Rendered by Script.jss) -->
+      <div class="exhibitions-grid" id="exhibitionsGrid">
+        <!-- Javascript populates cards here -->
+        <noscript>
+          <p style="padding: 24px; color: var(--gr-fog);">กรุณาเปิดการใช้งาน JavaScript เพื่อสัมผัสประสบการณ์อินเตอร์แอคทีฟเต็มรูปแบบ</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HALL 02: KNOWLEDGE GRAPH & DATA BOOMING
+       ========================================================================= -->
+  <section class="section-block" id="hall-graph">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-row">
+          <span class="section-tag">HALL 02 // KNOWLEDGE GRAPH INNOVATION</span>
+          <span class="category-pill pill-tech">PATENT PENDING</span>
+        </div>
+        <h2 class="section-title">สัมผัสโครงข่ายความรู้สองมิติ: Data Booming & แผนที่ความรู้</h2>
+        <p class="section-subtitle">
+          ก้าวข้ามการอ่านบทความขนาดยาว ด้วยระบบ Data Booming ที่ระเบิดความเชื่อมโยงใน 40ms 
+          และ Interactive Graph ที่ให้คุณสำรวจความสัมพันธ์ข้ามศาสตร์ด้วยตนเอง
+        </p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="hall2-tabs">
+        <button class="tab-btn active" data-tab="tab-booming">
+          💥 DATA BOOMING LAB (จำลองการระเบิดความรู้)
+        </button>
+        <button class="tab-btn" data-tab="tab-graph">
+          🌐 INTERACTIVE GRAPH MAP (โครงข่ายความรู้ฉบับเต็ม)
+        </button>
+      </div>
+
+      <!-- TAB 1: DATA BOOMING SIMULATOR -->
+      <div class="tab-content active" id="tab-booming">
+        <div class="booming-workspace">
+          <div class="booming-hud-header">
+            <div>
+              <span class="specimen-label" id="boomingStatusBadge">STATUS: STANDBY (READY TO BOOM)</span>
+              <span class="mono" style="font-size: 12px; margin-left: 12px; color: var(--text-secondary);">
+                ความเชื่อมโยงปัจจุบัน: <strong id="boomingCounter" style="color: var(--gr-lime);">1 โหนด (ราก)</strong>
+              </span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <label for="boomingTopicSelect" class="mono" style="font-size: 12px; color: var(--gr-fog);">เลือกหัวข้อความรู้:</label>
+              <select id="boomingTopicSelect" class="mono" style="background: var(--gr-void); color: var(--text-primary); border: 1px solid var(--border-line); padding: 6px 12px; border-radius: 3px;">
+                <option value="siam_reform">การปฏิรูปข้อมูลสยามสู่ยุคดิจิทัล</option>
+                <option value="herb_tech">พฤกษศาสตร์สมุนไพร & เทคโนโลยีอาหาร</option>
+              </select>
+              <button id="boomingResetBtn" class="btn-secondary" style="padding: 7px 16px; font-size: 11px;">
+                รีเซ็ต (RESET)
+              </button>
+            </div>
+          </div>
+
+          <!-- Canvas / SVG Area for Booming -->
+          <div class="booming-canvas-container" id="boomingWorkspaceBox">
+            <svg class="booming-svg" id="boomingSvgLines"></svg>
+
+            <!-- Center Clickable Root Node -->
+            <div class="booming-center-node" id="boomingCenterNode" title="คลิกเพื่อระเบิดความรู้ (BOOM)">
+              <div class="tag">GRM-CORE-ROOT-001</div>
+              <div class="title">การปฏิรูปข้อมูลสยามสู่ยุคดิจิทัล</div>
+              <div class="mono" style="font-size: 11px; color: var(--gr-lime); margin-top: 4px;">
+                [ คลิกเพื่อระเบิดความรู้ ⚡ ]
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--text-secondary);">
+            <span>💡 <strong>คำแนะนำ:</strong> คลิกที่โหนดกลางเพื่อดูการแตกตัว 8-12 กิ่งแบบ 40ms | คลิกที่กิ่งลูกเพื่ออ่านบทเรียนนำไปใช้จริง</span>
+            <span class="mono" style="color: var(--gr-ember);">BURST INTERVAL: 40ms // STRICT BRIEF COMPLIANCE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: INTERACTIVE KNOWLEDGE GRAPH -->
+      <div class="tab-content" id="tab-graph">
+        <div class="graph-grid-layout">
+          <div class="graph-canvas-box">
+            <canvas id="knowledgeGraphCanvas"></canvas>
+            
+            <!-- Graph Legend -->
+            <div class="graph-legend">
+              <div class="legend-item"><span class="legend-dot" style="background: var(--cat-sci);"></span><span>วิทยาศาสตร์ (Cyan)</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--cat-tech);"></span><span>เทคโนโลยี (Violet)</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--cat-hist);"></span><span>ประวัติศาสตร์ (Ember)</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--cat-cult);"></span><span>วัฒนธรรม (Amber)</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--cat-bio);"></span><span>ธรรมชาติ (Bio Green)</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--gr-lime);"></span><span>กำลังเลือก (Lime)</span></div>
+            </div>
+          </div>
+
+          <!-- Node Details Sidebar -->
+          <div class="graph-sidebar-panel cut-corner">
+            <div>
+              <div class="mono" style="font-size: 11px; color: var(--gr-lime); letter-spacing: 1.5px; margin-bottom: 8px;">
+                SPECIMEN INSPECTOR
+              </div>
+              <div class="selected-node-details">
+                <span class="category-pill pill-tech" id="graphNodeCat">TECH</span>
+                <h3 id="graphNodeTitle" style="font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 6px 0;">
+                  Future AI Curator
+                </h3>
+                <div class="mono" style="font-size: 12px; color: var(--text-secondary);">
+                  ยุคสมัย: <span id="graphNodeEra" style="color: var(--text-primary);">ศตวรรษที่ 22</span>
+                </div>
+                <div class="everyday-takeaway-box" style="margin-top: 14px;">
+                  <div class="takeaway-tag">⚡ EVERYDAY TAKEAWAY</div>
+                  <div class="takeaway-text" id="graphNodeTakeaway">
+                    การตรวจสอบแหล่งที่มาก่อนเชื่อ และการสังเคราะห์ความรู้ข้ามสายงาน
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-top: 16px; border-top: 1px solid var(--border-line);">
+              <div class="mono" style="font-size: 11px; color: var(--gr-fog);" id="graphNodeLinksCount">
+                5 เส้นทางเชื่อมโยง
+              </div>
+              <p style="font-size: 12px; color: var(--text-secondary); margin-top: 6px;">
+                คลิกโหนดอื่นบน Canvas หรือเลื่อนเมาส์เพื่อสำรวจโหนดข้างเคียง
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HALL 03: EVERYDAY LAB (TAKEAWAYS)
+       ========================================================================= -->
+  <section class="section-block" id="hall-lab">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-row">
+          <span class="section-tag">HALL 03 // EVERYDAY LAB</span>
+          <span class="specimen-label">BUILT FOR EVERYDAY LIVING</span>
+        </div>
+        <h2 class="section-title">ห้องแล็บความรู้เพื่อการใช้ชีวิตทุกวัน</h2>
+        <p class="section-subtitle">
+          เพราะความรู้จากอดีตไม่มีความหมายหากไม่ถูกแปลงเป็นสิ่งที่คนรุ่นใหม่ใช้ได้จริง 
+          นี่คือการ์ดความรู้ขนาด 1080×1350 px ที่คัดสรรมาเพื่อการทำงาน สุขภาพ และการคิดเชิงระบบ
+        </p>
+      </div>
+
+      <div class="lab-cards-grid">
+        <!-- Lab Card 1 -->
+        <div class="takeaway-card-square">
+          <div>
+            <span class="card-step-badge">PILLAR 01 // SMART WORK</span>
+            <h3 class="takeaway-quote">
+              "จัดระเบียบงานแบบ Flow Architecture เลียนแบบโครงข่ายคูคลองอยุธยาและพระนคร"
+            </h3>
+            <p class="takeaway-context">
+              ลดการเกิดคอขวด (Bottleneck) ในการทำงานเป็นทีม ด้วยการกระจายงานออกเป็นทางน้ำหลากย่อย 
+              และกำหนดผู้รับผิดชอบตามระดับแรงดันของงาน เพื่อป้องกันระบบล่มสลายในชั่วโมงเร่งด่วน
+            </p>
+          </div>
+          <div class="takeaway-footer">
+            <span class="mono" style="font-size: 11px; color: var(--gr-fog);">REF: GRM-1782-TECH</span>
+            <button class="btn-deck" onclick="copyTakeawayText('จัดระเบียบงานแบบ Flow Architecture เลียนแบบโครงข่ายคูคลองอยุธยาและพระนคร เพื่อลดคอขวดในการทำงาน')">
+              คัดลอกบทเรียน 📋
+            </button>
+          </div>
+        </div>
+
+        <!-- Lab Card 2 -->
+        <div class="takeaway-card-square">
+          <div>
+            <span class="card-step-badge" style="color: var(--cat-bio);">PILLAR 02 // SUSTAINABLE LIVING</span>
+            <h3 class="takeaway-quote">
+              "Passive Cooling: อยู่ร่วมกับความร้อนในห้องคอนโดและบ้านด้วยหลักการเรือนไทย"
+            </h3>
+            <p class="takeaway-context">
+              สร้างทางผ่านของลมข้ามห้อง (Cross Ventilation) และติดตั้งระแนงบังแดดในทิศตะวันตกเฉียงใต้ 
+              ช่วยลดอุณหภูมิสะสมภายในตัวอาคารได้จริง 2–4 องศาเซลเซียส ประหยัดค่าไฟแอร์ลง 25%
+            </p>
+          </div>
+          <div class="takeaway-footer">
+            <span class="mono" style="font-size: 11px; color: var(--gr-fog);">REF: GRM-1920-HIST</span>
+            <button class="btn-deck" onclick="copyTakeawayText('Passive Cooling: อยู่ร่วมกับความร้อนด้วยทางผ่านลม Cross Ventilation และลดแดดบ่าย ประหยัดไฟได้ 25%')">
+              คัดลอกบทเรียน 📋
+            </button>
+          </div>
+        </div>
+
+        <!-- Lab Card 3 -->
+        <div class="takeaway-card-square">
+          <div>
+            <span class="card-step-badge" style="color: var(--cat-sci);">PILLAR 03 // CRITICAL THINKING</span>
+            <h3 class="takeaway-quote">
+              "Empirical Grounding: กรองข้อมูลในโซเชียลมีเดียด้วยระเบียบวิธีหว้ากอ"
+            </h3>
+            <p class="takeaway-context">
+              ไม่เชื่อข้อมูลจากคลิปสั้นเพียงเพราะความรู้สึกหรือยอดวิว แต่ตรวจสอบว่ามีตัวแปรที่พิสูจน์ได้จริง 
+              (Verifiable Variables) หรือไม่ เพื่อสร้างภูมิคุ้มกันทางดิจิทัลให้แก่ตนเองและครอบครัว
+            </p>
+          </div>
+          <div class="takeaway-footer">
+            <span class="mono" style="font-size: 11px; color: var(--gr-fog);">REF: GRM-1872-SCI</span>
+            <button class="btn-deck" onclick="copyTakeawayText('Empirical Grounding: กรองข้อมูลโซเชียลมีเดียด้วยการมองหาตัวแปรที่ตรวจสอบได้ แทนความรู้สึกหรือยอดวิว')">
+              คัดลอกบทเรียน 📋
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HALL 04: FUTURE ARCHAEOLOGY & ABOUT
+       ========================================================================= -->
+  <section class="section-block" id="hall-about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-row">
+          <span class="section-tag">HALL 04 // ABOUT & PHILOSOPHY</span>
+          <span class="specimen-label">THE 5-STAGE KNOWLEDGE JOURNEY</span>
+        </div>
+        <h2 class="section-title">พันธกิจ 5 ขั้นตอนของภัณฑารักษ์จากอนาคต</h2>
+        <p class="section-subtitle">
+          "สำหรับคนวัย 22–40 ปีที่อยากเข้าใจโลกให้ลึกกว่าคลิปสั้น แต่ไม่อยากรู้สึกเหมือนนั่งเรียน" 
+          นี่คือเส้นทางที่เปลี่ยนข้อมูลประวัติศาสตร์ให้กลายเป็นปัญญาปฏิบัติ
+        </p>
+      </div>
+
+      <!-- 5-Stage Missions Flow -->
+      <div class="missions-flow">
+        <div class="mission-card">
+          <div class="mission-step-num">STAGE 01 // EXCAVATE</div>
+          <h3 class="mission-title">ขุดค้น (Excavate)</h3>
+          <p class="mission-desc">
+            คัดสรรความรู้จากประวัติศาสตร์ วิทยาศาสตร์ และภูมิปัญญา ระบุแหล่งที่มาและหลักฐานทุกชิ้นอย่างโปร่งใส 100%
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step-num" style="color: var(--cat-tech);">STAGE 02 // DECODE</div>
+          <h3 class="mission-title">ถอดรหัส (Decode)</h3>
+          <p class="mission-desc">
+            ถอดโครงสร้างข้อมูลเป็นโหนดและกราฟความรู้ (Knowledge Graph) ระบุความสัมพันธ์อย่างเป็นระบบ
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step-num" style="color: var(--gr-cyan);">STAGE 03 // RETELL</div>
+          <h3 class="mission-title">เล่าใหม่ (Retell)</h3>
+          <p class="mission-desc">
+            สื่อสารผ่าน Visual Storytelling และอินเตอร์แอคทีฟดีไซน์ ให้เข้าใจง่ายและดูจบในเวลาเพียง 3-5 นาที
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step-num" style="color: var(--gr-lime);">STAGE 04 // CONNECT</div>
+          <h3 class="mission-title">เชื่อมโยง (Connect)</h3>
+          <p class="mission-desc">
+            เปิดชุดข้อมูลผ่าน Data Booming และ Interactive Graph ให้เห็นว่าความรู้ข้ามยุคสมัยเชื่อมโยงกันอย่างไร
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step-num" style="color: var(--cat-bio);">STAGE 05 // APPLY</div>
+          <h3 class="mission-title">ประยุกต์ใช้ (Apply)</h3>
+          <p class="mission-desc">
+            ปิดท้ายทุกนิทรรศการด้วยการ์ด Everyday Takeaway ที่ระบุวิธีนำไปใช้ในชีวิตและการทำงานจริงได้ทันที
+          </p>
+        </div>
+      </div>
+
+      <!-- Target Personas Section -->
+      <div style="margin-top: 64px;">
+        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 24px;">ออกแบบเพื่อประชาชนคนรุ่นใหม่ 3 กลุ่ม</h3>
+        <div class="personas-grid">
+          <div class="persona-box">
+            <div class="persona-badge">PERSONA 01 // AGE 22-27</div>
+            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Curious Starter</h4>
+            <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;">
+              นักศึกษาจบใหม่และคนเพิ่งเริ่มทำงาน ต้องการเรื่องเล่ากระชับ สวยงาม และการ์ดความรู้สำหรับแชร์บน Social Media
+            </p>
+          </div>
+
+          <div class="persona-box">
+            <div class="persona-badge" style="color: var(--gr-lime);">PERSONA 02 // AGE 25-34</div>
+            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Creative Professional</h4>
+            <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;">
+              นักออกแบบ ครีเอเตอร์ และนักพัฒนาซอฟต์แวร์ที่มองหาแรงบันดาลใจ ชุดข้อมูลที่ดาวน์โหลดได้ และ Interactive Graph เชิงลึก
+            </p>
+          </div>
+
+          <div class="persona-box">
+            <div class="persona-badge" style="color: var(--gr-ember);">PERSONA 03 // AGE 30-40</div>
+            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Lifelong Learner</h4>
+            <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;">
+              คนทำงานและพ่อแม่รุ่นใหม่ที่ต้องการความน่าเชื่อถือ ตัวอักษรที่อ่านสบายตา และการนำความรู้สุขภาพและภูมิปัญญาไปดูแลครอบครัว
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SPECIMEN DETAIL MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="specimenModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="specimen-label" id="modalSpecimenTag">GRM-0000</span>
+          <span class="category-pill pill-sci" id="modalCategoryPill">SCIENCE</span>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <img src="" alt="" class="modal-thumb" id="modalImage">
+        <h2 id="modalTitle" style="font-size: 26px; font-weight: 700; margin-bottom: 6px;">หัวข้อตัวอย่าง</h2>
+        <div class="mono" style="font-size: 13px; color: var(--gr-lime); margin-bottom: 16px;">
+          ยุคสมัย: <span id="modalEra" style="color: var(--text-primary);">-</span>
+        </div>
+
+        <p id="modalSummary" style="font-size: 16px; color: var(--text-primary); line-height: 1.7; margin-bottom: 16px; font-weight: 500;"></p>
+        <p id="modalDetails" style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;"></p>
+
+        <div class="everyday-takeaway-box" style="padding: 16px;">
+          <div class="takeaway-tag" style="font-size: 12px;">⚡ EVERYDAY TAKEAWAY FOR CITIZENS</div>
+          <div class="takeaway-text" id="modalTakeaway" style="font-size: 15px; font-weight: 600; margin-top: 4px;"></div>
+        </div>
+
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-line); display: flex; align-items: center; justify-content: space-between;">
+          <span class="mono" style="font-size: 12px; color: var(--gr-fog);">
+            แหล่งอ้างอิง: <span id="modalSource" style="color: var(--text-primary);">-</span>
+          </span>
+          <button class="btn-primary" onclick="copyTakeawayText(document.getElementById('modalTakeaway').textContent)" style="padding: 10px 18px; font-size: 12px;">
+            บันทึกบทเรียน 📋
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-title" style="margin-bottom: 10px;">
+            GRURU MUSEUM
+            <span class="specimen-label" style="font-size: 10px;">DIGITAL HERITAGE</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; max-width: 360px;">
+            "New Knowledge. New Storytelling. Built for Everyday Living."<br>
+            แพลตฟอร์มพิพิธภัณฑ์ความรู้ดิจิทัลแห่งชาติ ขับเคลื่อนโดยกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">NAVIGATION</div>
+          <ul class="footer-links">
+            <li><a href="#hero">หน้าหลัก (Home)</a></li>
+            <li><a href="#hall-exhibitions">ห้องนิทรรศการ (Hall 01)</a></li>
+            <li><a href="#hall-graph">กราฟความรู้ (Hall 02)</a></li>
+            <li><a href="#hall-lab">ความรู้ใช้จริง (Hall 03)</a></li>
+            <li><a href="#hall-about">ปรัชญาและพันธกิจ (Hall 04)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">PROJECT SPECS</div>
+          <ul class="footer-links">
+            <li><a href="extracted_doc.txt" target="_blank">Project Brief 11 ขั้นตอน</a></li>
+            <li><a href="Index_presentation_backup.html">สไลด์นำเสนอผู้บริหาร (MDES)</a></li>
+            <li><a href="stye.css" target="_blank">Design Tokens CSS</a></li>
+            <li><a href="Script.jss" target="_blank">Synthesizer & Graph Logic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">STANDARDS & CERTIFICATION</div>
+          <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            ระบบออกแบบตามเกณฑ์ WCAG AA รองรับ Dark Void & Archive Paper Mode พร้อมระบบลดการเคลื่อนไหว (Reduced Motion)
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="specimen-label">WCAG 2.1 AA</span>
+            <span class="specimen-label" style="color: var(--gr-lime);">D3/CANVAS V2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 GRURU MUSEUM. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 20px;">
+          <span>STATUS: ALL SYSTEMS NOMINAL</span>
+          <span>LAT 13.7563° N / LON 100.5018° E</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       SCRIPTS
+       Linking both Script.jss (as requested) and script.js fallback
+       ========================================================================= -->
+  <script src="Script.jss"></script>
+  <script src="script.js"></script>
+</body>
+</html>
